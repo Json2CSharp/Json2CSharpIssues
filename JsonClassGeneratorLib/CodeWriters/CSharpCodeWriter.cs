@@ -157,7 +157,7 @@ namespace Xamasoft.JsonClassGenerator.CodeWriters
 
             var rootType = rootIsArray ? "List<Root>" : "Root";
 
-            sw.AppendLine($"// Root myDeserializedClass = {deserializer}<{rootType}>(myJsonResponse);");
+            sw.AppendLine($"// {rootType} myDeserializedClass = {deserializer}<{rootType}>(myJsonResponse);");
         }
 
         public void WriteNamespaceStart(StringBuilder sw, bool root)
