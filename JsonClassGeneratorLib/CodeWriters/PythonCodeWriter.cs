@@ -147,11 +147,13 @@ namespace Xamasoft.JsonClassGenerator.CodeWriters
                 mappingFunction.AppendLine(mappingString);
                 fields.Append(internalPropertyAttribute + ", ");
             }
-            
-            // Remove trailing comma
-            fields.Length--;
-            fields.Length--;
-            
+
+            // Remove trailing comma and trailing space
+            if (fields.Length > 0)
+            {
+                fields.Length -= 2;
+            }
+
             // Write Dictionnary Mapping Functions
             sw.AppendLine();
             sw.AppendLine("    @staticmethod");
