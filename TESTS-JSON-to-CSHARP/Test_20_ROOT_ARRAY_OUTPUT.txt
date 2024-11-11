@@ -1,4 +1,4 @@
-// Root myDeserializedClass = JsonConvert.DeserializeObject<List<Root>>(myJsonResponse);
+// List<Root> myDeserializedClass = JsonConvert.DeserializeObject<List<Root>>(myJsonResponse);
     public class Root
     {
         public string ID { get; set; }
